@@ -87,7 +87,7 @@ onMounted(() => {
           viewBox="0 0 150.000000 132.000000"
           preserveAspectRatio="xMidYMid meet"
         >
-          <g transform="translate(0.000000,132.000000) scale(0.100000,-0.100000)" fill="#666CFF" class="" stroke="none">
+          <g transform="translate(0.000000,132.000000) scale(0.100000,-0.100000)" fill="#a78bfa" class="" stroke="none">
             <path
               d="M500 1310 l-125 -5 -182 -315 c-100 -173 -182 -321 -182 -329 -1 -7
             81 -159 181 -337 l183 -324 372 0 371 0 186 325 c102 179 186 330 186 337 0 7
@@ -113,7 +113,7 @@ onMounted(() => {
       </div>
       <h1 class="text-primary text-3xl md:!text-6xl font-bold capitalize">{{ chainStore.chainName }} Faucet</h1>
     </div>
-    <div class="bg-base-100 my-5 px-4 pt-3 pb-4 rounded shadow">
+    <div class="bg-[#0b0f19] my-5 px-4 pt-3 pb-4 rounded shadow">
       <h2 class="card-title">Get Tokens</h2>
       <input
         type="text"
@@ -130,7 +130,7 @@ onMounted(() => {
 
     <AdBanner id="home-banner-ad" unit="banner" />
 
-    <div class="bg-base-100 my-5 px-4 pt-3 pb-4 rounded shadow">
+    <div class="bg-[#0b0f19] my-5 px-4 pt-3 pb-4 rounded shadow">
       <h2 class="card-title">Enable Faucet</h2>
       <div class="mt-4">
         <span class="text-base"> 1. Submit chain configuration</span>

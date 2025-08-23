@@ -117,7 +117,7 @@ const amount = computed({
 
 <template>
   <div>
-    <div v-if="coinInfo && coinInfo.name" class="bg-base-100 rounded shadow">
+    <div v-if="coinInfo && coinInfo.name" class="bg-[#0b0f19] rounded shadow">
       <div class="grid grid-cols-2 md:grid-cols-3 p-4">
         <div class="col-span-2 md:col-span-1">
           <div class="text-xl font-semibold text-main">
@@ -183,7 +183,7 @@ const amount = computed({
                       @click="store.selectTicker(index)"
                     >
                       <div
-                        class="flex items-center justify-between hover:bg-base-100"
+                        class="flex items-center justify-between hover:bg-[#0b0f19]"
                       >
                         <div class="flex-1">
                           <div
@@ -323,7 +323,7 @@ const amount = computed({
 
     <div
       v-if="blockchain.supportModule('governance')"
-      class="bg-base-100 rounded mt-4 shadow"
+      class="bg-[#0b0f19] rounded mt-4 shadow"
     >
       <div class="px-4 pt-4 pb-2 text-lg font-semibold text-main">
         {{ $t('index.active_proposals') }}
@@ -339,7 +339,7 @@ const amount = computed({
       </div>
     </div>
 
-    <div class="bg-base-100 rounded mt-4 shadow">
+    <div class="bg-[#0b0f19] rounded mt-4 shadow">
       <div class="flex justify-between px-4 pt-4 pb-2 text-lg font-semibold text-main">
         <span class="truncate">{{ walletStore.currentAddress || 'Not Connected' }}</span>
         <RouterLink
@@ -466,7 +466,7 @@ const amount = computed({
       </Teleport>
     </div>
 
-    <div class="bg-base-100 rounded mt-4">
+    <div class="bg-[#0b0f19] rounded mt-4">
       <div class="px-4 pt-4 pb-2 text-lg font-semibold text-main">
         {{ $t('index.app_versions') }}
       </div>
@@ -478,7 +478,7 @@ const amount = computed({
       <div class="h-4"></div>
     </div>
 
-    <div v-if="!store.coingeckoId" class="bg-base-100 rounded mt-4">
+    <div v-if="!store.coingeckoId" class="bg-[#0b0f19] rounded mt-4">
       <div class="px-4 pt-4 pb-2 text-lg font-semibold text-main">
         {{ $t('index.node_info') }}
       </div>

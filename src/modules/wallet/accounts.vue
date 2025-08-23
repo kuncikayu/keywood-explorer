@@ -182,7 +182,7 @@ async function loadBalances(chainName: string, endpoint: string, address: string
 <template>
   <div>
     <div class="overflow-x-auto w-full rounded-md">
-      <div class="flex flex-wrap justify-between bg-base-100 p-5">
+      <div class="flex flex-wrap justify-between bg-[#0b0f19] p-5">
         <div class="min-w-0">
           <h2 class="text-2xl font-bold leading-7 sm:!truncate sm:!text-3xl sm:!tracking-tight">Accounts</h2>
           <div class="mt-1 flex flex-col sm:!mt-0 sm:!flex-row sm:!flex-wrap sm:!space-x-6">
@@ -226,12 +226,12 @@ async function loadBalances(chainName: string, endpoint: string, address: string
     <div class="overflow-x-auto">
       <div
         v-for="{ key, subaccounts } in accounts"
-        class="bg-base-100 rounded-md my-5 py-5"
+        class="bg-[#0b0f19] rounded-md my-5 py-5"
       >
         <div class="flex justify-self-center">
           <div class="mx-2 p-2">
             <svg
-              :fill="chainStore.current?.themeColor || '#666CFF'"
+              :fill="chainStore.current?.themeColor || '#a78bfa'"
               height="28px"
               width="28px"
               version="1.1"
@@ -348,7 +348,7 @@ async function loadBalances(chainName: string, endpoint: string, address: string
         </div>
       </div>
 
-      <div class="text-center bg-base-100 rounded-md my-4 p-4">
+      <div class="text-center bg-[#0b0f19] rounded-md my-4 p-4">
         <a
           href="#address-modal"
           class="inline-flex items-center ml-3 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"

@@ -44,7 +44,7 @@ function showInfo(address: string) {
 </script>
 <template>
   <div>
-    <div class="bg-base-100 px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <h2 class="card-title truncate w-full">{{ $t('cosmwasm.contract_list_code') }}: {{ props.code_id }}</h2>
       <div class="overflow-x-auto">
         <table class="table table-compact w-full mt-4">

@@ -1,11 +1,16 @@
 #loading-bg {
-  background: var(--initial-loader-bg, #fff);
+  background-color: #0b0f19 !important;
 }
 
 .loading-logo {
   position: absolute;
-  inset-block-start: 40%;
-  inset-inline-start: calc(50% - 75px);
+  color: #a78bfa;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 .pre-loading {
@@ -26,7 +31,7 @@
   box-sizing: border-box;
   border: 3px solid transparent;
   block-size: 100%;
-  border-inline-start: 3px solid var(--initial-loader-color, #eee);
+  border-inline-start: 3px solid var(--initial-loader-color, #a78bfa);
   border-radius: 50%;
   inline-size: 100%;
 }

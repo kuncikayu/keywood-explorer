@@ -18,7 +18,7 @@ const hdPath = computed(() => {
 </script>
 <template>
   <div>
-    <div class="bg-base-100 px-4 pt-3 pb-4 rounded shadow">
+    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded shadow">
       <h2 class="card-title">{{ $t('widget.title') }}</h2>
       <div class="my-4 grid grid-flow-col auto-cols-max overflow-auto">
         <div class="form-control">
@@ -38,7 +38,7 @@ const hdPath = computed(() => {
         ><code class="text-gray-800 dark:invert">&lt;script type="module" src="https://unpkg.com/ping-widget@latest/dist/ping-widget.js"&gt;</code></pre>
       </div>
     </div>
-    <div class="bg-base-100 my-5 px-4 pt-3 pb-4 rounded shadow">
+    <div class="bg-[#0b0f19] my-5 px-4 pt-3 pb-4 rounded shadow">
       <h2 class="card-title">{{ $t('module.widget') }}</h2>
       <div class="mt-4">
         <span class="text-base"> 1. {{ $t('widget.text_2') }}</span>

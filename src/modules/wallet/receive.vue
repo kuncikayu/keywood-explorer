@@ -7,7 +7,7 @@ const qrcode = useQRCode(walletStore.currentAddress);
 </script>
 
 <template>
-  <div class="bg-base-100 p-4 rounded text-center">
+  <div class="bg-[#0b0f19] p-4 rounded text-center">
     <div class="text-xl font-semibold text-center">Pay Me</div>
     <div
       v-if="walletStore.currentAddress"

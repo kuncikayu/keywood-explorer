@@ -84,16 +84,16 @@ const show_ad = computed(() => {
 </script>
 
 <template>
-  <div class="bg-gray-100 dark:bg-[#171d30]">
+  <div class="bg-gray-100 dark:bg-[#0b0f19]">
     <!-- sidebar -->
     <div
-      class="w-64 fixed z-50 left-0 top-0 bottom-0 overflow-auto bg-base-100 border-r border-gray-100 dark:border-gray-700"
+      class="w-64 border border-violet-400/60 fixed z-50 left-4 top-4 bottom-4 overflow-y-auto rounded-xl shadow-lg bg-[#0b0f19] dark:bg-[#0b0f19] border border-transparent custom-scrollbar"
       :class="{ block: sidebarShow, 'hidden xl:!block': !sidebarShow }"
     >
       <div class="flex justify-between mt-1 pl-4 py-4 mb-1">
         <RouterLink to="/" class="flex items-center">
           <img class="w-10 h-10" src="../../assets/logo.svg" />
-          <h1 class="flex-1 ml-3 text-2xl font-semibold dark:text-white">Ping.pub</h1>
+          <h1 class="flex-1 ml-3 text-lg font-semibold dark:text-white !leading-tight">Keywood <br/> Explorer</h1>
         </RouterLink>
         <div
           class="pr-4 cursor-pointer xl:!hidden"
@@ -139,7 +139,7 @@ const show_ad = computed(() => {
             </div>
           </div>
           <div class="collapse-content">
-            <div v-for="(el, key) of item?.children" class="menu bg-base-100 w-full !p-0">
+            <div v-for="(el, key) of item?.children" class="menu bg-[#0b0f19] w-full !p-0">
               <RouterLink
                 v-if="isNavLink(el)"
                 @click="sidebarShow = false"
@@ -177,7 +177,7 @@ const show_ad = computed(() => {
             </div>
             <div
               v-if="index === 0 && dashboard.networkType === NetworkType.Testnet"
-              class="menu bg-base-100 w-full !p-0"
+              class="menu bg-[#0b0f19] w-full !p-0"
             >
               <RouterLink
                 class="hover:bg-gray-100 dark:hover:bg-[#373f59] rounded cursor-pointer px-3 py-2 flex items-center"
@@ -247,7 +247,7 @@ const show_ad = computed(() => {
         <Sponsors v-if="showDiscord" />
         <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">{{ $t('module.links') }}</div>
         <a
-          href="https://twitter.com/ping_pub"
+          href="https://twitter.com/kuncikayu_"
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
@@ -264,19 +264,19 @@ const show_ad = computed(() => {
           <div class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200">Discord</div>
         </a>
         <a
-          href="https://github.com/ping-pub/explorer/discussions"
+          href="https://github.com/kuncikayu"
           target="_blank"
           class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
-          <Icon icon="mdi:frequently-asked-questions" class="text-xl mr-2" />
-          <div class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200">FAQ</div>
+          <Icon icon="mdi:github" class="text-xl mr-2" />
+          <div class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200">Github</div>
         </a>
       </div>
     </div>
-    <div class="xl:!ml-64 px-3 pt-4">
+    <div class="xl:!ml-72 px-3 pt-4">
       <!-- header -->
       <div
-        class="flex items-center py-3 bg-base-100 mb-4 rounded px-4 sticky top-0 z-10"
+        class="flex items-center py-3 bg-[#0b0f19] border border-violet-400/60 mb-4 rounded-xl px-4 sticky top-5 z-10"
       >
         <div
           class="text-2xl pr-3 cursor-pointer xl:!hidden"
@@ -291,7 +291,7 @@ const show_ad = computed(() => {
 
         <!-- <NavSearchBar />-->
         <NavBarI18n class="hidden md:!inline-block" />
-        <NavbarThemeSwitcher class="!inline-block" />
+        <NavbarThemeSwitcher class="!hidden" />
         <NavbarSearch class="!inline-block" />
         <NavBarWallet />
       </div>
@@ -334,3 +334,15 @@ const show_ad = computed(() => {
     </div>
   </div>
 </template>
+
+<style>
+.custom-scrollbar {
+  scrollbar-width: none; /* Untuk Firefox */
+  -ms-overflow-style: none; /* Untuk Internet Explorer dan Edge */
+}
+
+/* Untuk WebKit (Chrome, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+</style>

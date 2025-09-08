@@ -3,7 +3,7 @@
     "api": [
         {
             "provider": "Keywood",
-            "address": "https://empeiria-testnet-rpc.keywood.site"
+            "address": "https://empeiria-testnet-api.keywood.site"
         }
     ],
     "rpc": [

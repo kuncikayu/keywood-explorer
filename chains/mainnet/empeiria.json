@@ -1,11 +1,5 @@
 {
     "chain_name": "empe",
-    "api": [
-        {
-            "provider": "Keywood",
-            "address": "https://empeiria-testnet-api.keywood.site"
-        }
-    ],
     "rpc": [
         {
             "provider": "Keywood",

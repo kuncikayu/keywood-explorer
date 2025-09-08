@@ -2,14 +2,14 @@
     "chain_name": "empe",
     "api": [
         {
-            "provider": "CryptoNodeID",
-            "address": "https://empeiria-testnet-api.cryptonode.id"
+            "provider": "Keywood",
+            "address": "https://empeiria-testnet-api.keywood.site"
         }
     ],
     "rpc": [
         {
-            "provider": "CryptoNodeID",
-            "address": "https://empeiria-testnet-rpc.cryptonode.id"
+            "provider": "Keywood",
+            "address": "https://empeiria-testnet-rpc.keywood.site"
         }
     ],
     "sdk_version": "0.47.12",

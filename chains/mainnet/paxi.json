@@ -1,0 +1,28 @@
+{
+    "chain_name": "paxi",
+    "api": [
+        {
+            "address": "https://paxi-mainnet-api.keywood.site",
+            "provider": "Keywood"
+        }
+    ],
+    "rpc": [
+        {
+            "address": "https://paxi-mainnet-rpc.keywood.site",
+            "provider": "Keywood"
+        }
+    ],
+    "sdk_version": "0.53.0",
+    "coin_type": "118",
+    "min_tx_fee": "4000",
+    "assets": [{
+        "base": "upaxi",
+        "symbol": "PAXI",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "https://paxinet.io/resources/img/icon_transparent.png"
+    }],
+    "addr_prefix": "paxi",
+    "theme_color": "#8C7EFF",
+    "logo": "https://paxinet.io/resources/img/icon_transparent.png"
+}

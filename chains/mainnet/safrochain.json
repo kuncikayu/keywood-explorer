@@ -3,27 +3,27 @@
     "api": [
         {
             "address": "https://safrochain-testnet-api.keywood.site",
-            "provider": "Safrochain"
+            "provider": "Keywood"
         }
     ],
     "rpc": [
         {
             "address": "https://safrochain-testnet-rpc.keywood.site",
-            "provider": "Safrochain"
+            "provider": "Keywood"
         }
     ],
     "sdk_version": "0.50.13",
     "coin_type": "118",
     "min_tx_fee": "1500",
     "addr_prefix": "addr_safro",
-    "logo": "/logos/saf.svg",
+    "logo": "https://safrochain.com/lovable-uploads/b0a413cc-c8cb-4914-ae6f-a2cc1556efc5.png",
     "assets": [
         {
             "base": "usaf",
             "symbol": "SAF",
             "exponent": "6",
             "coingecko_id": "safro",
-            "logo": "/logos/saf.svg"
+            "logo": "https://safrochain.com/lovable-uploads/b0a413cc-c8cb-4914-ae6f-a2cc1556efc5.png"
         }
     ],
     "faucet": {

@@ -1,0 +1,26 @@
+{
+    "chain_name": "republic",
+    "api": [
+        {
+            "address": "https://republic-testnet-api.keywood.site",
+            "provider": "Keywood"
+        }
+    ],
+    "rpc": [
+        {
+            "address": "https://republic-testnet-rpc.keywood.site",
+            "provider": "Keywood"
+        }
+    ],
+    "sdk_version": "0.53.3",
+    "coin_type": "118",
+    "min_tx_fee": "4000",
+    "assets": [
+        {
+            "base": "arai",
+            "symbol": "RAI",
+            "exponent": "6",
+            "logo": "https://i.ibb.co.com/xcjfT56/lf-Ltj2x-400x400.jpg"
+        }
+    ]
+}

@@ -1,5 +1,5 @@
 {
-    "chain_name": "republic",
+    "chain_name": "republic testnet",
     "api": [
         {
             "address": "https://republic-testnet-api.keywood.site",
@@ -12,15 +12,19 @@
             "provider": "Keywood"
         }
     ],
-    "sdk_version": "0.53.3",
+    "sdk_version": "0.53.0",
     "coin_type": "118",
     "min_tx_fee": "4000",
     "assets": [
         {
             "base": "arai",
             "symbol": "RAI",
-            "exponent": "6",
+            "exponent": "18",
+            "coingecko_id": "",
             "logo": "https://i.ibb.co.com/xcjfT56/lf-Ltj2x-400x400.jpg"
         }
-    ]
+    ],
+    "addr_prefix": "rai",
+    "theme_color": "#8C7EFF",
+    "logo": "https://i.ibb.co.com/xcjfT56/lf-Ltj2x-400x400.jpg"
 }

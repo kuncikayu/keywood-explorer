@@ -1,5 +1,5 @@
 {
-    "chain_name": "lumen",
+    "chain_name": "lumen mainnet",
     "api": [
         {
             "address": "https://lumen-mainnet-api.keywood.site",
@@ -15,12 +15,14 @@
     "sdk_version": "0.53.3",
     "coin_type": "118",
     "min_tx_fee": "4000",
-    "assets": [{
-        "base": "ulmn",
-        "symbol": "LMN",
-        "exponent": "6",
-        "logo": "https://i.ibb.co.com/Y7x3sXvH/4gz-0rl-D-400x400.jpg"
-    }],
+    "assets": [
+        {
+            "base": "ulmn",
+            "symbol": "LMN",
+            "exponent": "6",
+            "logo": "https://i.ibb.co.com/Y7x3sXvH/4gz-0rl-D-400x400.jpg"
+        }
+    ],
     "addr_prefix": "lmn",
     "theme_color": "#01061c",
     "logo": "https://i.ibb.co.com/Y7x3sXvH/4gz-0rl-D-400x400.jpg"

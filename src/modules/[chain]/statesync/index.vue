@@ -40,7 +40,7 @@ onMounted(() => {
 </script>
 <template>
   <div>
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <h2 class="card-title truncate mb-2">{{ $t('statesync.title') }}</h2>
       <div class="text-sm">
         {{ $t('statesync.description') }}
@@ -51,7 +51,7 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <h2 class="card-title truncate mb-2">
         {{ $t('statesync.title_2') }}
       </h2>
@@ -68,20 +68,20 @@ onMounted(() => {
         <div class="mockup-code bg-base-200 my-2">
           <pre
             data-prefix=">"
-          ><code class="text-gray-800 dark:invert">[state-sync]</code></pre>
+          ><code class="text-gray-800 dark:text-gray-200">[state-sync]</code></pre>
           <pre
             data-prefix=">"
-          ><code class="text-gray-800 dark:invert">enable = true</code></pre>
+          ><code class="text-gray-800 dark:text-gray-200">enable = true</code></pre>
           <pre data-prefix=">"><code class="text-gray-800"></code></pre>
           <pre
             data-prefix=">"
-          ><code class="text-gray-800 dark:invert">rpc_servers = "{{ rpcs }}"</code></pre>
+          ><code class="text-gray-800 dark:text-gray-200">rpc_servers = "{{ rpcs }}"</code></pre>
           <pre
             data-prefix=">"
-          ><code class="text-gray-800 dark:invert">trust_height = {{ height }} </code></pre>
+          ><code class="text-gray-800 dark:text-gray-200">trust_height = {{ height }} </code></pre>
           <pre
             data-prefix=">"
-          ><code class="text-gray-800 dark:invert">trust_hash = "{{ hash }}"</code></pre>
+          ><code class="text-gray-800 dark:text-gray-200">trust_hash = "{{ hash }}"</code></pre>
           <pre
             data-prefix=">"
           ><code class="text-gray-800 dark:invert"></code></pre>
@@ -90,7 +90,7 @@ onMounted(() => {
           ><code class="text-green-400"># 2/3 of unbonding time</code></pre>
           <pre
             data-prefix=">"
-          ><code class="text-gray-800 dark:invert">trust_period = "168h"</code></pre>
+          ><code class="text-gray-800 dark:text-gray-200">trust_period = "168h"</code></pre>
         </div>
         <br />
         3. {{ $t('statesync.text_3') }}:
@@ -105,7 +105,7 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded shadow">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded shadow">
       <h2 class="card-title truncate mb-2">{{ $t('statesync.title_3') }}</h2>
       <div class="text-sm">
         {{ $t('statesync.text_title_3') }}
@@ -117,12 +117,12 @@ onMounted(() => {
           <pre
             data-prefix=">"
           ><code class="text-green-400"># taken (0 to disable). Must be a multiple of pruning-keep-every.</code></pre>
-          <pre data-prefix=">"><code class="text-gray-800 dark:invert">snapshot-interval = 1000</code></pre>
+          <pre data-prefix=">"><code class="text-gray-800 dark:text-gray-200">snapshot-interval = 1000</code></pre>
           <pre data-prefix=">"><code class="text-gray-800 dark:invert"></code></pre>
           <pre
             data-prefix=">"
           ><code class="text-green-400"># snapshot-keep-recent specifies the number of recent snapshots to keep and serve (0 to keep all). Each snapshot is about 500MiB</code></pre>
-          <pre data-prefix=">"><code class="text-gray-800 dark:invert">snapshot-keep-recent = 2</code></pre>
+          <pre data-prefix=">"><code class="text-gray-800 dark:text-gray-200">snapshot-keep-recent = 2</code></pre>
         </div>
       </div>
     </div>

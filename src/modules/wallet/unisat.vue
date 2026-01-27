@@ -90,7 +90,7 @@ function suggest() {
 </script>
 
 <template>
-  <div class="bg-[#0b0f19] p-4 rounded text-center">
+  <div class="bg-white dark:bg-[#061a15] p-4 rounded text-center">
     <AdBanner id="keplr-banner-ad" unit="banner" width="970px" height="90px" />
     <div class="flex">
       <select v-model="selected" class="select select-bordered mx-5" @change="initParamsForKeplr">

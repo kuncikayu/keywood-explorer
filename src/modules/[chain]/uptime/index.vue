@@ -212,7 +212,7 @@ function changeTab(v: string) {
         <a class="tab text-gray-400 capitalize">{{ $t('uptime.customize') }}</a>
       </RouterLink>
     </div>
-    <div class="bg-[#0b0f19] px-5 pt-5">
+    <div class="bg-white dark:bg-[#061a15] px-5 pt-5">
       <div class="flex items-center gap-x-4">
         <input
           type="text"

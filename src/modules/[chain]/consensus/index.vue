@@ -151,7 +151,7 @@ async function update() {
 <template>
   <div>
     <!--  -->
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded shadow">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded shadow">
       <div class="form-control">
         <label class="input-group input-group-md w-full flex">
           <!-- <input
@@ -173,7 +173,7 @@ async function update() {
     <!-- cards -->
     <div class="mt-4" v-if="roundState['height/round/step']">
       <div class="grid grid-cols-1 md:!grid-cols-4 auto-cols-auto gap-4 pb-4">
-        <div class="bg-[#0b0f19] px-4 py-3 rounded shadow flex justify-between items-center">
+        <div class="bg-white dark:bg-[#061a15] px-4 py-3 rounded shadow flex justify-between items-center">
           <div class="text-sm mb-1 flex flex-col truncate">
             <h4 class="text-lg font-semibold text-main">{{ rate }}</h4>
             <span class="text-md">{{ $t('consensus.onboard_rate') }}</span>
@@ -185,7 +185,7 @@ async function update() {
           </div>
         </div>
         <!-- Height -->
-        <div class="bg-[#0b0f19] px-4 py-3 rounded shadow flex justify-between items-center">
+        <div class="bg-white dark:bg-[#061a15] px-4 py-3 rounded shadow flex justify-between items-center">
           <div class="text-sm mb-1 flex flex-col truncate">
             <h4 class="text-lg font-semibold text-main">{{ height }}</h4>
             <span class="text-md">{{ $t('account.height') }}</span>
@@ -197,7 +197,7 @@ async function update() {
           </div>
         </div>
         <!-- Round -->
-        <div class="bg-[#0b0f19] px-4 py-3 rounded shadow flex justify-between items-center">
+        <div class="bg-white dark:bg-[#061a15] px-4 py-3 rounded shadow flex justify-between items-center">
           <div class="text-sm mb-1 flex flex-col truncate">
             <h4 class="text-lg font-semibold text-main">{{ round }}</h4>
             <span class="text-md">{{ $t('consensus.round') }}</span>
@@ -209,7 +209,7 @@ async function update() {
           </div>
         </div>
         <!-- Step -->
-        <div class="bg-[#0b0f19] px-4 py-3 rounded shadow flex justify-between items-center">
+        <div class="bg-white dark:bg-[#061a15] px-4 py-3 rounded shadow flex justify-between items-center">
           <div class="text-sm mb-1 flex flex-col truncate">
             <h4 class="text-lg font-semibold text-main">{{ step }}</h4>
             <span class="text-md">{{ $t('consensus.step') }}</span>
@@ -223,7 +223,7 @@ async function update() {
       </div>
     </div>
     <!-- update -->
-    <div class="bg-[#0b0f19] p-4 rounded shadow" v-if="roundState['height/round/step']">
+    <div class="bg-white dark:bg-[#061a15] p-4 rounded shadow" v-if="roundState['height/round/step']">
       <div class="flex flex-1 flex-col truncate">
         <h2 class="text-sm card-title text-error mb-6">{{ $t('consensus.updated_at') }} {{ newTime || '' }}</h2>
         <div v-for="item in roundState.height_vote_set" :key="item.round">

@@ -36,7 +36,7 @@ function search() {
       >
     </div>
 
-    <div v-show="tab === 'recent'" class="bg-[#0b0f19] rounded overflow-x-auto">
+    <div v-show="tab === 'recent'" class="bg-white dark:bg-[#061a15] rounded overflow-x-auto">
       <table class="table w-full table-compact">
         <thead class="bg-base-200">
           <tr>
@@ -82,7 +82,7 @@ function search() {
       </div>
     </div>
 
-    <div v-show="tab === 'search'" class="bg-[#0b0f19] rounded overflow-x-auto">
+    <div v-show="tab === 'search'" class="bg-white dark:bg-[#061a15] rounded overflow-x-auto">
       <div class="p-4">
         <div class="form-control">
           <input

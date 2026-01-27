@@ -145,7 +145,7 @@ function color(v: string) {
       </div>
     </div>
 
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <h2 class="card-title mb-4 overflow-hidden">
         {{ $t('ibc.title_2') }}<span class="ml-2 text-sm">{{ clientState.client_state?.['@type'] }}</span>
       </h2>
@@ -226,7 +226,7 @@ function color(v: string) {
         </table>
       </div>
     </div>
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow overflow-hidden">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow overflow-hidden">
       <h2 class="card-title">{{ $t('ibc.channels') }}</h2>
       <div class="overflow-auto">
         <table class="table w-full mt-4">
@@ -338,7 +338,7 @@ function color(v: string) {
           <tr v-for="resp in txs?.tx_responses">
             <td>{{ resp.height }}</td>
             <td>
-              <div class="text-xs truncate text-primary dark:invert">
+              <div class="text-xs truncate text-primary dark:text-[#3fb68b]">
                 <RouterLink
                   :to="`/${chainStore.chainName}/tx/${resp.txhash}`"
                   >{{ resp.txhash }}</RouterLink

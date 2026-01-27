@@ -157,7 +157,7 @@ function suggest() {
 </script>
 
 <template>
-  <div class="bg-[#0b0f19] p-4 rounded text-center">
+  <div class="bg-white dark:bg-[#061a15] p-4 rounded text-center">
     <div class="flex text-center">
       <select v-model="network" class="select select-bordered">
         <option :value="NetworkType.Mainnet">Mainnet</option>

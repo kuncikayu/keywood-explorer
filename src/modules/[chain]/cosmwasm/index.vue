@@ -41,7 +41,7 @@ function gotoHistory() {
 }
 </script>
 <template>
-  <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+  <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
     <h2 class="card-title truncate w-full mb-4">{{ $t('cosmwasm.title') }}</h2>
     <div class="grid grid-flow-col auto-cols-max gap-4 overflow-hidden">
       <div class="join w-full border border-primary">
@@ -76,7 +76,7 @@ function gotoHistory() {
             <td>
               <RouterLink
                 :to="`/${props.chain}/cosmwasm/${v.code_id}/contracts`"
-                class="truncate max-w-[200px] block text-primary dark:invert"
+                class="truncate max-w-[200px] block text-primary dark:text-[#3fb68b]"
                 :title="v.data_hash"
               >
                 {{ v.data_hash }}

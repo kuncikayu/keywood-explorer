@@ -117,7 +117,7 @@ const amount = computed({
 
 <template>
   <div>
-    <div v-if="coinInfo && coinInfo.name" class="bg-[#0b0f19] rounded shadow">
+    <div v-if="coinInfo && coinInfo.name" class="bg-white dark:bg-[#061a15] rounded shadow">
       <div class="grid grid-cols-2 md:grid-cols-3 p-4">
         <div class="col-span-2 md:col-span-1">
           <div class="text-xl font-semibold text-main">
@@ -183,7 +183,7 @@ const amount = computed({
                       @click="store.selectTicker(index)"
                     >
                       <div
-                        class="flex items-center justify-between hover:bg-[#0b0f19]"
+                        class="flex items-center justify-between hover:bg-gray-100 dark:hover:bg-[#08221b]"
                       >
                         <div class="flex-1">
                           <div
@@ -323,7 +323,7 @@ const amount = computed({
 
     <div
       v-if="blockchain.supportModule('governance')"
-      class="bg-[#0b0f19] rounded mt-4 shadow"
+      class="bg-white dark:bg-[#061a15] rounded mt-4 shadow"
     >
       <div class="px-4 pt-4 pb-2 text-lg font-semibold text-main">
         {{ $t('index.active_proposals') }}
@@ -339,7 +339,7 @@ const amount = computed({
       </div>
     </div>
 
-    <div class="bg-[#0b0f19] rounded mt-4 shadow">
+    <div class="bg-white dark:bg-[#061a15] rounded mt-4 shadow">
       <div class="flex justify-between px-4 pt-4 pb-2 text-lg font-semibold text-main">
         <span class="truncate">{{ walletStore.currentAddress || 'Not Connected' }}</span>
         <RouterLink
@@ -352,28 +352,28 @@ const amount = computed({
       <div
         class="grid grid-cols-1 md:!grid-cols-4 auto-cols-auto gap-4 px-4 pb-6"
       >
-        <div class="bg-gray-100 dark:bg-[#373f59] rounded-sm px-4 py-3">
+        <div class="bg-gray-100 dark:bg-[#061a15] rounded-sm px-4 py-3">
           <div class="text-sm mb-1">{{ $t('account.balance') }}</div>
           <div class="text-lg font-semibold text-main">
             {{ format.formatToken(walletStore.balanceOfStakingToken) }}
           </div>
           <div class="text-sm" :class="color">${{ format.tokenValue(walletStore.balanceOfStakingToken) }}</div>
         </div>
-        <div class="bg-gray-100 dark:bg-[#373f59] rounded-sm px-4 py-3">
+        <div class="bg-gray-100 dark:bg-[#061a15] rounded-sm px-4 py-3">
           <div class="text-sm mb-1">{{ $t('module.staking') }}</div>
           <div class="text-lg font-semibold text-main">
             {{ format.formatToken(walletStore.stakingAmount) }}
           </div>
           <div class="text-sm" :class="color">${{ format.tokenValue(walletStore.stakingAmount) }}</div>
         </div>
-        <div class="bg-gray-100 dark:bg-[#373f59] rounded-sm px-4 py-3">
+        <div class="bg-gray-100 dark:bg-[#061a15] rounded-sm px-4 py-3">
           <div class="text-sm mb-1">{{ $t('index.reward') }}</div>
           <div class="text-lg font-semibold text-main">
             {{ format.formatToken(walletStore.rewardAmount) }}
           </div>
           <div class="text-sm" :class="color">${{ format.tokenValue(walletStore.rewardAmount) }}</div>
         </div>
-        <div class="bg-gray-100 dark:bg-[#373f59] rounded-sm px-4 py-3">
+        <div class="bg-gray-100 dark:bg-[#061a15] rounded-sm px-4 py-3">
           <div class="text-sm mb-1">{{ $t('index.unbonding') }}</div>
           <div class="text-lg font-semibold text-main">
             {{ format.formatToken(walletStore.unbondingAmount) }}
@@ -444,16 +444,16 @@ const amount = computed({
 
       <div class="grid grid-cols-3 gap-4 px-4 pb-6 mt-4">
         <label for="PingTokenConvert" class="btn btn-primary text-white">{{ $t('index.btn_swap') }}</label>
-        <label for="send" class="btn !bg-yes !border-yes text-white" @click="dialog.open('send', {}, updateState)">{{
+        <label for="send" class="btn btn-primary text-white" @click="dialog.open('send', {}, updateState)">{{
           $t('account.btn_send')
         }}</label>
         <label
           for="delegate"
-          class="btn !bg-info !border-info text-white"
+          class="btn btn-primary text-white"
           @click="dialog.open('delegate', {}, updateState)"
           >{{ $t('account.btn_delegate') }}</label
         >
-        <RouterLink to="/wallet/receive" class="btn !bg-info !border-info text-white hidden">{{
+        <RouterLink to="/wallet/receive" class="btn btn-primary text-white hidden">{{
           $t('index.receive')
         }}</RouterLink>
       </div>
@@ -466,7 +466,7 @@ const amount = computed({
       </Teleport>
     </div>
 
-    <div class="bg-[#0b0f19] rounded mt-4">
+    <div class="bg-white dark:bg-[#061a15] rounded mt-4 shadow">
       <div class="px-4 pt-4 pb-2 text-lg font-semibold text-main">
         {{ $t('index.app_versions') }}
       </div>
@@ -478,7 +478,7 @@ const amount = computed({
       <div class="h-4"></div>
     </div>
 
-    <div v-if="!store.coingeckoId" class="bg-[#0b0f19] rounded mt-4">
+    <div v-if="!store.coingeckoId" class="bg-white dark:bg-[#061a15] rounded mt-4 shadow">
       <div class="px-4 pt-4 pb-2 text-lg font-semibold text-main">
         {{ $t('index.node_info') }}
       </div>

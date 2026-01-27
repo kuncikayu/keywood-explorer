@@ -190,7 +190,7 @@ function callFunction(title: string, method: string, arg: Argument) {
 }
 </script>
 <template>
-  <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+  <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
     <div role="tablist" class="tabs tabs-boxed">
       <a role="tab" class="tab tooltip tooltip-right tooltip-success" data-tip="Powered By WELLDONE Studio">
         <div class="w-8 rounded">

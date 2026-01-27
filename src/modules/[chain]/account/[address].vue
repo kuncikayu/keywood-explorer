@@ -122,7 +122,7 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
 <template>
   <div v-if="account">
     <!-- address -->
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <div class="flex items-center">
         <!-- img -->
         <div class="inline-flex relative w-11 h-11 rounded-md">
@@ -140,7 +140,7 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
     </div>
 
     <!-- Assets -->
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <div class="flex justify-between">
         <h2 class="card-title mb-4">{{ $t('account.assets') }}</h2>
         <!-- button -->
@@ -185,8 +185,8 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
                   {{ format.calculatePercent(balanceItem.amount, totalAmount) }}
                 </div>
               </div>
-              <div class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:invert mr-2">
-                <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary dark:invert text-sm"></span>
+              <div class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:text-[#3fb68b] mr-2">
+                <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary dark:bg-white text-sm"></span>
                 ${{ format.tokenValue(balanceItem) }}
               </div>
             </div>
@@ -204,8 +204,8 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
                   {{ format.calculatePercent(delegationItem?.balance?.amount, totalAmount) }}
                 </div>
               </div>
-              <div class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:invert mr-2">
-                <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary dark:invert text-sm"></span>
+              <div class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:text-[#3fb68b] mr-2">
+                <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary dark:bg-white text-sm"></span>
                 ${{ format.tokenValue(delegationItem?.balance) }}
               </div>
             </div>
@@ -223,8 +223,8 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
                   {{ format.calculatePercent(rewardItem.amount, totalAmount) }}
                 </div>
               </div>
-              <div class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:invert mr-2">
-                <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary dark:invert text-sm"></span>${{
+              <div class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:text-[#3fb68b] mr-2">
+                <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary dark:bg-white text-sm"></span>${{
                   format.tokenValue(rewardItem)
                 }}
               </div>
@@ -248,8 +248,8 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
                   {{ format.calculatePercent(unbondingTotal, totalAmount) }}
                 </div>
               </div>
-              <div class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:invert mr-2">
-                <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary dark:invert"></span>
+              <div class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:text-[#3fb68b] mr-2">
+                <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary dark:bg-white"></span>
                 ${{
                   format.tokenValue({
                     amount: String(unbondingTotal),
@@ -269,7 +269,7 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
     </div>
 
     <!-- Delegations -->
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <div class="flex justify-between">
         <h2 class="card-title mb-4">{{ $t('account.delegations') }}</h2>
         <div class="flex justify-end mb-4">
@@ -366,7 +366,7 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
     </div>
 
     <!-- Unbonding Delegations -->
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow" v-if="unbonding && unbonding.length > 0">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow" v-if="unbonding && unbonding.length > 0">
       <h2 class="card-title mb-4">{{ $t('account.unbonding_delegations') }}</h2>
       <div class="overflow-x-auto">
         <table class="table text-sm w-full">
@@ -420,7 +420,7 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
     </div>
 
     <!-- Transactions -->
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <h2 class="card-title mb-4">{{ $t('account.transactions') }}</h2>
       <div class="overflow-x-auto">
         <table class="table w-full text-sm">
@@ -442,14 +442,14 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
               <td class="text-sm py-3">
                 <RouterLink
                   :to="`/${chain}/block/${v.height}`"
-                  class="text-primary dark:invert"
+                  class="text-primary dark:text-[#3fb68b]"
                   >{{ v.height }}</RouterLink
                 >
               </td>
               <td class="truncate py-3" style="max-width: 200px">
                 <RouterLink
                   :to="`/${chain}/tx/${v.txhash}`"
-                  class="text-primary dark:invert"
+                  class="text-primary dark:text-[#3fb68b]"
                 >
                   {{ v.txhash }}
                 </RouterLink>
@@ -472,7 +472,7 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
     </div>
 
     <!-- Received -->
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <h2 class="card-title mb-4">{{ $t('account.received') }}</h2>
       <div class="overflow-x-auto">
         <table class="table w-full text-sm">
@@ -494,14 +494,14 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
               <td class="text-sm py-3">
                 <RouterLink
                   :to="`/${chain}/block/${v.height}`"
-                  class="text-primary dark:invert"
+                  class="text-primary dark:text-[#3fb68b]"
                   >{{ v.height }}</RouterLink
                 >
               </td>
               <td class="truncate py-3" style="max-width: 200px">
                 <RouterLink
                   :to="`/${chain}/tx/${v.txhash}`"
-                  class="text-primary dark:invert"
+                  class="text-primary dark:text-[#3fb68b]"
                 >
                   {{ v.txhash }}
                 </RouterLink>
@@ -524,7 +524,7 @@ function mapAmount(events: { type: string; attributes: { key: string; value: str
     </div>
 
     <!-- Account -->
-    <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <h2 class="card-title mb-4">{{ $t('account.acc') }}</h2>
       <DynamicComponent :value="account" />
     </div>

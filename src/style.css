@@ -20,16 +20,43 @@ body {
 }
 
 :root {
-  --text-main: #333;
-  --text-secondary: #4b525d;
-  --bg-active: #fbfbfc;
+  --text-main: #1a2622;
+  --text-secondary: #50605a;
+  --bg-active: #f4f9f7;
+  --border-color: #ecf0f1;
+  
+  /* DaisyUI Primary Color: #104d37 (Deep Green) */
+  --p: 158 66% 18%;   /* Primary */
+  --pf: 158 66% 15%;  /* Primary Focus (Darker) */
+  --pc: 0 0% 100%;    /* Primary Content (Text on Primary) -> White */
 }
+
+body {
+  background-color: var(--bg-active);
+  color: var(--text-main);
+}
+
 
 html.dark,
 html[data-theme='dark'] {
-  --text-main: #f7f7f7;
-  --text-secondary: #6f6e84;
-  --bg-active: #242b40;
+  --text-main: #eaeaea;
+  --text-secondary: #9caeb0;
+  --bg-active: #061a15;
+  --border-color: #1e3a33;
+  --b1: 0 0% 0%;
+  --b2: 0 0% 0%;
+  --b3: 0 0% 0%;
+
+  /* Dark Mode Primary - Keep consistent or adjust brightness if needed */
+  --p: 158 66% 18%;
+  --pf: 158 66% 15%;
+  --pc: 0 0% 100%;
+}
+
+html.dark body,
+html[data-theme='dark'] body {
+  background-color: #000000;
+  color: var(--text-main);
 }
 
 .table th:first-child {

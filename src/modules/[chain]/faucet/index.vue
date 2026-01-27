@@ -113,7 +113,7 @@ onMounted(() => {
       </div>
       <h1 class="text-primary text-3xl md:!text-6xl font-bold capitalize">{{ chainStore.chainName }} Faucet</h1>
     </div>
-    <div class="bg-[#0b0f19] my-5 px-4 pt-3 pb-4 rounded shadow">
+    <div class="bg-white dark:bg-[#061a15] my-5 px-4 pt-3 pb-4 rounded shadow">
       <h2 class="card-title">Get Tokens</h2>
       <input
         type="text"
@@ -130,13 +130,13 @@ onMounted(() => {
 
     <AdBanner id="home-banner-ad" unit="banner" />
 
-    <div class="bg-[#0b0f19] my-5 px-4 pt-3 pb-4 rounded shadow">
+    <div class="bg-white dark:bg-[#061a15] my-5 px-4 pt-3 pb-4 rounded shadow">
       <h2 class="card-title">Enable Faucet</h2>
       <div class="mt-4">
         <span class="text-base"> 1. Submit chain configuration</span>
         <div class="mockup-code bg-base-200 my-2 gap-4">
           <div v-for="it in checklist">
-            <pre><code class="text-gray-800 dark:invert">{{ it.title }}: </code>{{ it.status ? '✅' : '❌' }} </pre>
+            <pre><code class="text-gray-800 dark:text-gray-200">{{ it.title }}: </code>{{ it.status ? '✅' : '❌' }} </pre>
           </div>
 
           <pre class="text-xs text-red-500">{{ configChecker }}</pre>
@@ -150,10 +150,11 @@ onMounted(() => {
 
         <span class="text-base"> 2. Fund the faucet account</span>
         <div class="mockup-code bg-base-200 my-2">
-          <pre data-prefix=">"><code class=" text-gray-800 dark:invert"> Faucet Address: {{ faucet }} </code></pre>
+          <pre data-prefix=">"><code class=" text-gray-800 dark:text-gray-200"> Faucet Address: {{ faucet }} </code></pre>
           <pre
             data-prefix=">"
-          ><code class="text-gray-800 dark:invert"> Balances: {{ format.formatTokens(balances) }} </code></pre>
+          ><code class="text-gray-800 dark:text-gray-200"
+> Balances: {{ format.formatTokens(balances) }} </code></pre>
         </div>
       </div>
     </div>

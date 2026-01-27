@@ -36,7 +36,7 @@ const list = computed(() => {
       <div class="grid xl:!grid-cols-6 md:!grid-cols-4 grid-cols-1 gap-3">
         <RouterLink
           v-for="item in list"
-          class="flex flex-col justify-between rounded p-4 shadow bg-[#0b0f19]"
+          class="flex flex-col justify-between rounded p-4 shadow bg-white dark:bg-[#061a15]"
           :to="`/${chain}/block/${item.block.header.height}`"
         >
           <div class="flex justify-between">

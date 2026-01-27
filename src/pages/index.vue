@@ -50,7 +50,7 @@ const chainStore = useBlockchain();
       <div class="w-16 rounded-full">
         <img src="/logo.svg" alt="Logo" />
       </div>
-      <h1 class="text-violet-400 text-3xl md:!text-6xl font-bold">
+      <h1 class="text-[#104d37] dark:text-[#3fb68b] text-3xl md:!text-6xl font-bold">
         {{ $t('pages.title') }}
       </h1>
     </div>
@@ -60,17 +60,17 @@ const chainStore = useBlockchain();
     </div>
 
     <div class="flex justify-center my-6">
-      <div class="tabs tabs-boxed bg-base-200 dark:bg-gray-800 rounded-xl">
+      <div class="tabs tabs-boxed bg-base-200 dark:bg-black rounded-xl">
         <a
           class="tab text-base font-semibold transition-colors duration-200"
-          :class="{ 'tab-active text-white bg-primary': activeTab === 'cosmos' }"
+          :class="{ 'tab-active text-white !bg-[#104d37] dark:!bg-[#3fb68b]': activeTab === 'cosmos' }"
           @click="activeTab = 'cosmos'"
         >
           Cosmos Ecosystem 🚀
         </a>
         <a
           class="tab text-base font-semibold transition-colors duration-200"
-          :class="{ 'tab-active text-white bg-primary': activeTab === 'featured' }"
+          :class="{ 'tab-active text-white !bg-[#104d37] dark:!bg-[#3fb68b]': activeTab === 'featured' }"
           @click="activeTab = 'featured'"
         >
           Featured 🔥
@@ -79,7 +79,7 @@ const chainStore = useBlockchain();
     </div>
 
     <template v-if="activeTab === 'featured'">
-      <div class="text-center text-base mt-6 text-primary">
+      <div class="text-center text-base mt-6 text-[#104d37] dark:text-[#3fb68b]">
         <h2 class="mb-6 text-xl">Featured Blockchains 🔥</h2>
       </div>
       <div
@@ -91,11 +91,11 @@ const chainStore = useBlockchain();
     </template>
 
     <template v-if="activeTab === 'cosmos'">
-      <div class="text-center text-base mt-6 text-primary">
+      <div class="text-center text-base mt-6 text-[#104d37] dark:text-[#3fb68b]">
         <h2 class="mb-6 text-xl">{{ $t('pages.description') }}</h2>
       </div>
 
-      <div class="flex items-center rounded-lg bg-base-200 border border-[#a78bfa] dark:border-[#a78bfa] mt-10">
+      <div class="flex items-center rounded-lg bg-base-200 dark:bg-black border border-[#104d37]/40 dark:border-[#3fb68b]/30 mt-10">
         <Icon icon="mdi:magnify" class="text-2xl text-gray-400 ml-3" />
         <input
           :placeholder="$t('pages.search_placeholder')"

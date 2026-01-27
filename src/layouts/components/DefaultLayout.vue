@@ -84,22 +84,22 @@ const show_ad = computed(() => {
 </script>
 
 <template>
-  <div class="bg-gray-100 dark:bg-[#0b0f19]">
+  <div class="bg-base-200 min-h-screen">
     <!-- sidebar -->
     <div
-      class="w-64 border border-violet-400/60 fixed z-50 left-4 top-4 bottom-4 overflow-y-auto rounded-xl shadow-lg bg-[#0b0f19] dark:bg-[#0b0f19] border border-transparent custom-scrollbar"
+      class="w-64 border border-primary/20 fixed z-50 left-4 top-4 bottom-4 overflow-y-auto rounded-xl shadow-lg bg-[#104d37] dark:bg-[#061a15] border border-transparent custom-scrollbar"
       :class="{ block: sidebarShow, 'hidden xl:!block': !sidebarShow }"
     >
       <div class="flex justify-between mt-1 pl-4 py-4 mb-1">
         <RouterLink to="/" class="flex items-center">
-          <img class="w-10 h-10" src="../../assets/logo.svg" />
-          <h1 class="flex-1 ml-3 text-lg font-semibold dark:text-white !leading-tight">Keywood <br/> Explorer</h1>
+          <img class="w-10 h-10" src="/logo.svg" />
+          <h1 class="flex-1 ml-3 text-lg font-semibold text-white !leading-tight">Keywood <br/> Explorer</h1>
         </RouterLink>
         <div
           class="pr-4 cursor-pointer xl:!hidden"
           @click="sidebarShow = false"
         >
-          <Icon icon="mdi-close" class="text-2xl" />
+          <Icon icon="mdi-close" class="text-2xl text-white" />
         </div>
       </div>
       <div v-for="(item, index) of blockchain.computedChainMenu" :key="index" class="px-2">
@@ -115,7 +115,7 @@ const show_ad = computed(() => {
         >
           <input v-if="index > 0" type="checkbox" class="cursor-pointer !h-10 block" @click="changeOpen(index)" />
           <div
-            class="collapse-title !py-0 px-4 flex items-center cursor-pointer hover:bg-gray-100 dark:hover:bg-[#373f59]"
+            class="collapse-title !py-0 px-4 flex items-center cursor-pointer hover:bg-primary/10"
           >
             <Icon
               v-if="item?.icon?.icon"
@@ -123,29 +123,29 @@ const show_ad = computed(() => {
               class="text-xl mr-2"
               :class="{
                 'text-yellow-500': item?.title === 'Favorite',
-                'text-blue-500': item?.title !== 'Favorite',
+                'text-white dark:text-[#3fb68b]': item?.title !== 'Favorite',
               }"
             />
             <img v-if="item?.icon?.image" :src="item?.icon?.image" class="w-6 h-6 rounded-full mr-3" />
-            <div class="text-base capitalize flex-1 text-gray-700 dark:text-gray-200 whitespace-nowrap">
+            <div class="text-base capitalize flex-1 text-white dark:text-gray-200 whitespace-nowrap">
               {{ item?.title }}
             </div>
             <div
               v-if="item?.badgeContent"
-              class="mr-6 badge badge-sm text-white border-none"
+              class="mr-6 badge badge-sm border-none"
               :class="item?.badgeClass"
             >
               {{ item?.badgeContent }}
             </div>
           </div>
           <div class="collapse-content">
-            <div v-for="(el, key) of item?.children" class="menu bg-[#0b0f19] w-full !p-0">
+            <div v-for="(el, key) of item?.children" class="menu bg-[#104d37] dark:bg-[#061a15] w-full !p-0">
               <RouterLink
                 v-if="isNavLink(el)"
                 @click="sidebarShow = false"
-                class="hover:bg-gray-100 dark:hover:bg-[#373f59] rounded cursor-pointer px-3 py-2 flex items-center"
+                class="hover:bg-primary/10 rounded cursor-pointer px-3 py-2 flex items-center"
                 :class="{
-                  '!bg-primary': selected($route, el),
+                  '!bg-[#104d37] dark:!bg-[#104d37]': selected($route, el),
                 }"
                 :to="el.to"
               >
@@ -166,7 +166,7 @@ const show_ad = computed(() => {
                   }"
                 />
                 <div
-                  class="text-base capitalize text-gray-500 dark:text-gray-300"
+                  class="text-base capitalize text-gray-200 dark:text-gray-300"
                   :class="{
                     '!text-white': selected($route, el),
                   }"
@@ -177,14 +177,14 @@ const show_ad = computed(() => {
             </div>
             <div
               v-if="index === 0 && dashboard.networkType === NetworkType.Testnet"
-              class="menu bg-[#0b0f19] w-full !p-0"
+              class="menu bg-[#104d37] dark:bg-[#061a15] w-full !p-0"
             >
               <RouterLink
-                class="hover:bg-gray-100 dark:hover:bg-[#373f59] rounded cursor-pointer px-3 py-2 flex items-center"
+                class="hover:bg-primary/10 rounded cursor-pointer px-3 py-2 flex items-center"
                 :to="`/${blockchain.chainName}/faucet`"
               >
                 <Icon icon="mdi:chevron-right" class="mr-2 ml-3"></Icon>
-                <div class="text-base capitalize text-gray-500 dark:text-gray-300">Faucet</div>
+                <div class="text-base capitalize text-gray-200 dark:text-gray-300">Faucet</div>
                 <div class="badge badge-sm text-white border-none badge-error ml-auto">New</div>
               </RouterLink>
             </div>
@@ -195,7 +195,7 @@ const show_ad = computed(() => {
           v-if="isNavLink(item)"
           :to="item?.to"
           @click="sidebarShow = false"
-          class="cursor-pointer rounded-lg px-4 flex items-center py-2 hover:bg-gray-100 dark:hover:bg-[#373f59]"
+          class="cursor-pointer rounded-lg px-4 flex items-center py-2 hover:bg-primary/10"
         >
           <Icon
             v-if="item?.icon?.icon"
@@ -203,20 +203,20 @@ const show_ad = computed(() => {
             class="text-xl mr-2"
             :class="{
               'text-yellow-500': item?.title === 'Favorite',
-              'text-blue-500': item?.title !== 'Favorite',
+              'text-dark dark:text-[#3fb68b]': item?.title !== 'Favorite',
             }"
           />
           <img
             v-if="item?.icon?.image"
             :src="item?.icon?.image"
-            class="w-6 h-6 rounded-full mr-3 border border-blue-100"
+            class="w-6 h-6 rounded-full mr-3 border border-[#104d37]/20 dark:border-[#3fb68b]/20"
           />
-          <div class="text-base capitalize flex-1 text-gray-700 dark:text-gray-200 whitespace-nowrap">
+          <div class="text-base capitalize flex-1 text-white dark:text-gray-200 whitespace-nowrap">
             {{ item?.title }}
           </div>
           <div
             v-if="item?.badgeContent"
-            class="badge badge-sm text-white border-none"
+            class="badge badge-sm border-none"
             :class="item?.badgeClass"
           >
             {{ item?.badgeContent }}
@@ -233,10 +233,10 @@ const show_ad = computed(() => {
         <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">Tools</div>
         <RouterLink
           to="/wallet/suggest"
-          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
+          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-primary/10"
         >
           <Icon icon="mdi:frequently-asked-questions" class="text-xl mr-2" />
-          <div class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200">Wallet Helper</div>
+          <div class="text-base capitalize flex-1 text-gray-200 dark:text-gray-200">Wallet Helper</div>
         </RouterLink>
         <div
           v-if="showDiscord"
@@ -249,40 +249,40 @@ const show_ad = computed(() => {
         <a
           href="https://twitter.com/kuncikayu_"
           target="_blank"
-          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
+          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-primary/10"
         >
           <Icon icon="mdi:twitter" class="text-xl mr-2" />
-          <div class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200">Twitter</div>
+          <div class="text-base capitalize flex-1 text-gray-200 dark:text-gray-200">Twitter</div>
         </a>
         <a
           v-if="showDiscord"
           href="https://discord.com/invite/CmjYVSr6GW"
           target="_blank"
-          class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-[#373f59]"
+          class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-primary/10"
         >
           <Icon icon="mdi:discord" class="text-xl mr-2" />
-          <div class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200">Discord</div>
+          <div class="text-base capitalize flex-1 text-gray-200 dark:text-gray-200">Discord</div>
         </a>
         <a
           href="https://github.com/kuncikayu"
           target="_blank"
-          class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-[#373f59]"
+          class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-primary/10"
         >
           <Icon icon="mdi:github" class="text-xl mr-2" />
-          <div class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200">Github</div>
+          <div class="text-base capitalize flex-1 text-gray-200 dark:text-gray-200">Github</div>
         </a>
       </div>
     </div>
     <div class="xl:!ml-72 px-3 pt-4">
       <!-- header -->
       <div
-        class="flex items-center py-3 bg-[#0b0f19] border border-violet-400/60 mb-4 rounded-xl px-4 sticky top-5 z-10"
+        class="flex items-center py-3 bg-[#104d37] dark:bg-[#061a15] border border-primary/20 mb-4 rounded-xl px-4 sticky top-5 z-10 shadow-sm"
       >
         <div
           class="text-2xl pr-3 cursor-pointer xl:!hidden"
           @click="sidebarShow = true"
         >
-          <Icon icon="mdi-menu" />
+          <Icon icon="mdi-menu" class="text-white" />
         </div>
 
         <ChainProfile />
@@ -290,9 +290,9 @@ const show_ad = computed(() => {
         <div class="flex-1 w-0"></div>
 
         <!-- <NavSearchBar />-->
-        <NavBarI18n class="hidden md:!inline-block" />
-        <NavbarThemeSwitcher class="!hidden" />
-        <NavbarSearch class="!inline-block" />
+        <NavBarI18n class="hidden md:!inline-block text-white" />
+        <NavbarThemeSwitcher />
+        <NavbarSearch class="!inline-block text-white" />
         <NavBarWallet />
       </div>
 

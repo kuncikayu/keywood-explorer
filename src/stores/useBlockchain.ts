@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import type { ChainConfig, Endpoint } from '@/types/chaindata';
-import { useDashboard} from './useDashboard';
+import { useDashboard } from './useDashboard';
 import type { NavGroup, NavLink, NavSectionTitle, VerticalNavItems } from '@/layouts/types';
 import { useRouter } from 'vue-router';
 import { CosmosRestClient } from '@/libs/client';
@@ -56,22 +56,14 @@ export const useBlockchain = defineStore('blockchain', {
       const router = useRouter();
       const routes = router?.getRoutes() || [];
       if (this.current && routes) {
-        if (this.current?.themeColor) {
-          const { color } = hexToRgb(this.current?.themeColor);
-          const { h, s, l } = rgbToHsl(color);
-          const themeColor = h + ' ' + s + '% ' + l + '%';
-          document.body.style.setProperty('--p', `${themeColor}`);
-          // document.body.style.setProperty('--p', `${this.current?.themeColor}`);
-        } else {
-          document.body.style.setProperty('--p', '237.65 100% 70%');
-        }
+        // Side-effect logic removed from getter
         currNavItem = [
           {
             title: this.current?.prettyName || this.chainName || '',
             icon: { image: this.current.logo, size: '22' },
             i18n: false,
             badgeContent: this.isConsumerChain ? 'Consumer' : undefined,
-            badgeClass: 'bg-error',
+            badgeClass: 'bg-error text-white',
             children: routes
               .filter((x) => x.meta.i18n) // defined menu name
               .filter((x) => !this.current?.features || this.current.features.includes(String(x.meta.i18n))) // filter none-custom module
@@ -107,7 +99,7 @@ export const useBlockchain = defineStore('blockchain', {
           title: 'Favorite',
           children: favNavItems,
           badgeContent: favNavItems.length,
-          badgeClass: 'bg-primary',
+          badgeClass: 'bg-white text-[#104d37]',
           i18n: true,
           icon: { icon: 'mdi-star', size: '22' },
         } as NavGroup,
@@ -115,7 +107,7 @@ export const useBlockchain = defineStore('blockchain', {
           title: 'All Blockchains',
           to: { path: '/' },
           badgeContent: this.dashboard.length,
-          badgeClass: 'bg-primary',
+          badgeClass: 'bg-white text-[#104d37]',
           i18n: true,
           icon: { icon: 'mdi-grid', size: '22' },
         } as NavLink,
@@ -165,6 +157,26 @@ export const useBlockchain = defineStore('blockchain', {
       this.rpc = CosmosRestClient.newStrategy(endpoint.address, this.current);
       localStorage.setItem(`endpoint-${this.chainName}`, JSON.stringify(endpoint));
     },
+    updateTheme(colorHex?: string) {
+      if (colorHex) {
+        const { color } = hexToRgb(colorHex);
+        const { h, s, l } = rgbToHsl(color);
+        // Set Primary
+        document.body.style.setProperty('--p', `${h} ${s}% ${l}%`);
+        // Set Primary Focus (slightly darker)
+        document.body.style.setProperty('--pf', `${h} ${s}% ${Math.max(0, l - 10)}%`);
+
+        // Calculate Contrast for Content (Text)
+        // If lightness is > 60%, use dark text. Otherwise use white.
+        const contentColor = l > 60 ? '0 0% 10%' : '0 0% 100%';
+        document.body.style.setProperty('--pc', contentColor);
+      } else {
+        // Fallback to Keywood Green (Dark, so white text)
+        document.body.style.setProperty('--p', `158 66% 18%`);
+        document.body.style.setProperty('--pf', `158 66% 15%`);
+        document.body.style.setProperty('--pc', `0 0% 100%`);
+      }
+    },
     async setCurrent(name: string) {
       // Ensure chains are loaded due to asynchronous calls.
       if (this.dashboard.length === 0) {
@@ -179,6 +191,10 @@ export const useBlockchain = defineStore('blockchain', {
       if (caseSensitiveName !== this.chainName) {
         this.chainName = caseSensitiveName;
       }
+
+
+      // Update Theme
+      this.updateTheme(this.current?.themeColor);
     },
     supportModule(mod: string) {
       return !this.current?.features || this.current.features.includes(mod);

@@ -62,7 +62,7 @@ function confirm() {
 <template>
   <div>
     <button class="btn btn-ghost btn-circle btn-sm mx-1" @click="openSearchModal">
-      <Icon icon="mdi:magnify" class="text-2xl text-gray-500 dark:text-gray-400" />
+      <Icon icon="mdi:magnify" class="text-2xl" />
     </button>
 
     <!-- modal -->

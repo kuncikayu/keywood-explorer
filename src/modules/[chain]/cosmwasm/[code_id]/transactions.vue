@@ -165,14 +165,14 @@ const tab = ref('detail');
     </div>
 
     <div v-show="tab === 'detail'">
-      <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+      <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
         <h2 class="card-title truncate w-full">
           {{ $t('cosmwasm.contract_detail') }}
         </h2>
         <DynamicComponent :value="info" />
       </div>
 
-      <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+      <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
         <div class="flex items-center justify-between px-3 pt-2">
           <div class="text-lg">{{ $t('cosmwasm.contract_balances') }}</div>
         </div>
@@ -188,7 +188,7 @@ const tab = ref('detail');
         </ul>
       </div>
 
-      <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+      <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
         <div class="flex items-center justify-between px-3 pt-2 mb-4">
           <div class="text-lg">{{ $t('cosmwasm.contract_states') }}</div>
         </div>
@@ -250,7 +250,7 @@ const tab = ref('detail');
       </div>
     </div>
 
-    <div v-show="tab === 'transaction'" class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div v-show="tab === 'transaction'" class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <h2 class="card-title truncate w-full mt-4 mb-2">Transactions</h2>
       <table class="table">
         <thead class="bg-base-200">
@@ -265,7 +265,7 @@ const tab = ref('detail');
           <tr v-for="resp in txs?.tx_responses">
             <td>{{ resp.height }}</td>
             <td>
-              <div class="text-xs truncate text-primary dark:invert">
+              <div class="text-xs truncate text-primary dark:text-[#3fb68b]">
                 <RouterLink :to="`/${chainStore.chainName}/tx/${resp.txhash}`">{{ resp.txhash }} </RouterLink>
               </div>
             </td>
@@ -284,7 +284,7 @@ const tab = ref('detail');
     </div>
 
     <div v-show="tab === 'query'">
-      <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+      <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
         <div class="flex items-center justify-between px-3 pt-2 mb-4">
           <div class="text-lg font-semibold">{{ $t('cosmwasm.suggested_messages') }}</div>
         </div>
@@ -311,7 +311,7 @@ const tab = ref('detail');
     </div>
 
     <div v-show="tab === 'execute'">
-      <div class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+      <div class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
         <div class="flex items-center justify-between px-3 pt-2 mb-4">
           <div class="text-lg font-semibold">{{ $t('cosmwasm.suggested_messages') }}</div>
         </div>
@@ -337,7 +337,7 @@ const tab = ref('detail');
       </div>
     </div>
 
-    <div v-if="tab === 'execute' || tab === 'query'" class="bg-[#0b0f19] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div v-if="tab === 'execute' || tab === 'query'" class="bg-white dark:bg-[#061a15] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <div class="flex items-center justify-between px-3 pt-2 mb-4">
         <div class="text-lg font-semibold">{{ $t('cosmwasm.result') }}</div>
       </div>

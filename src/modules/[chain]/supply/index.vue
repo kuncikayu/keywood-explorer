@@ -74,7 +74,7 @@ function pageload(p: number) {
 }
 </script>
 <template>
-  <div class="overflow-auto bg-[#0b0f19]">
+  <div class="overflow-auto bg-white dark:bg-[#061a15]">
     <table class="table table-compact">
       <thead class="bg-base-200">
         <tr>

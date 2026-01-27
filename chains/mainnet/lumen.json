@@ -1,5 +1,6 @@
 {
-    "chain_name": "lumen mainnet",
+    "chain_name": "lumen-mainnet",
+    "registry_name": "Lumen Mainnet",
     "api": [
         {
             "address": "https://lumen-mainnet-api.keywood.site",

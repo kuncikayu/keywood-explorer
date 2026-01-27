@@ -1,5 +1,6 @@
 {
-    "chain_name": "empeiria testnet",
+    "chain_name": "empeiria-testnet",
+    "registry_name": "Empeiria Testnet",
     "api": [
         {
             "provider": "Keywood",

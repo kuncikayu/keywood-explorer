@@ -1,5 +1,6 @@
 {
-    "chain_name": "safrochain testnet",
+    "chain_name": "safrochain-testnet",
+    "registry_name": "Safrochain Testnet",
     "api": [
         {
             "address": "https://safrochain-testnet-api.keywood.site",

@@ -1,5 +1,6 @@
 {
-    "chain_name": "paxi mainnet",
+    "chain_name": "paxi-mainnet",
+    "registry_name": "Paxi Mainnet",
     "api": [
         {
             "address": "https://paxi-mainnet-api.keywood.site",

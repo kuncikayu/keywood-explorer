@@ -1,5 +1,6 @@
 {
-    "chain_name": "republic testnet",
+    "chain_name": "republic-testnet",
+    "registry_name": "Republic Testnet",
     "api": [
         {
             "address": "https://republic-testnet-api.keywood.site",

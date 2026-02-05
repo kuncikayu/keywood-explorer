@@ -1,6 +1,6 @@
 {
     "chain_name": "pushchain-testnet",
-    "registry_name": "Push Chain Testnet",
+    "registry_name": "PushChain Testnet",
     "api": [
         {
             "address": "https://pushchain-testnet-api.keywood.site",

@@ -1,0 +1,30 @@
+{
+    "chain_name": "pushchain-testnet",
+    "registry_name": "Push Chain Testnet",
+    "api": [
+        {
+            "address": "https://pushchain-testnet-api.keywood.site",
+            "provider": "Keywood"
+        }
+    ],
+    "rpc": [
+        {
+            "address": "https://pushchain-testnet-rpc.keywood.site",
+            "provider": "Keywood"
+        }
+    ],
+    "sdk_version": "0.53.0",
+    "coin_type": "118",
+    "min_tx_fee": "4000",
+    "assets": [
+        {
+            "base": "upc",
+            "symbol": "PC",
+            "exponent": "18",
+            "coingecko_id": "",
+            "logo": "https://i.ibb.co.com/j9t8n70T/s-F-WW5f-400x400.jpg"
+        }
+    ],
+    "addr_prefix": "push",
+    "logo": "https://i.ibb.co.com/j9t8n70T/s-F-WW5f-400x400.jpg"
+}

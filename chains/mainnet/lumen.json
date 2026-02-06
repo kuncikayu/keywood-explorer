@@ -5,12 +5,20 @@
         {
             "address": "https://lumen-mainnet-api.keywood.site",
             "provider": "Keywood"
+        },
+        {
+            "address": "https://api-lumen.winnode.xyz",
+            "provider": "Winnode"
         }
     ],
     "rpc": [
         {
             "address": "https://lumen-mainnet-rpc.keywood.site",
             "provider": "Keywood"
+        },
+        {
+            "address": "https://rpc-lumen.winnode.xyz",
+            "provider": "Winnode"
         }
     ],
     "sdk_version": "0.53.3",

@@ -1,36 +1,36 @@
 {
-    "chain_name": "safrochain-testnet",
-    "registry_name": "Safrochain Testnet",
-    "api": [
-        {
-            "address": "https://safrochain-testnet-api.keywood.site",
-            "provider": "Keywood"
-        }
-    ],
-    "rpc": [
-        {
-            "address": "https://safrochain-testnet-rpc.keywood.site",
-            "provider": "Keywood"
-        }
-    ],
-    "sdk_version": "0.50.13",
-    "coin_type": "118",
-    "min_tx_fee": "1500",
-    "addr_prefix": "addr_safro",
-    "logo": "https://i.ibb.co.com/v49rngWx/safrochain.png",
-    "assets": [
-        {
-            "base": "usaf",
-            "symbol": "SAF",
-            "exponent": "6",
-            "coingecko_id": "safro",
-            "logo": "https://i.ibb.co.com/v49rngWx/safrochain.png"
-        }
-    ],
-    "faucet": {
-        "amount": "10000000usaf",
-        "ip_limit": "1",
-        "address_limit": "1",
-        "fees": "1500usaf"
+  "chain_name": "safrochain-mainnet",
+  "registry_name": "Safrochain Mainnet",
+  "api": [
+    {
+      "address": "https://safrochain-mainnet-api.keywood.site",
+      "provider": "Keywood"
     }
+  ],
+  "rpc": [
+    {
+      "address": "https://safrochain-mainnet-rpc.keywood.site",
+      "provider": "Keywood"
+    }
+  ],
+  "sdk_version": "0.50.13",
+  "coin_type": "118",
+  "min_tx_fee": "1500",
+  "addr_prefix": "addr_safro",
+  "logo": "https://i.ibb.co.com/v49rngWx/safrochain.png",
+  "assets": [
+    {
+      "base": "usaf",
+      "symbol": "SAF",
+      "exponent": "6",
+      "coingecko_id": "safro",
+      "logo": "https://i.ibb.co.com/v49rngWx/safrochain.png"
+    }
+  ],
+  "faucet": {
+    "amount": "10000000usaf",
+    "ip_limit": "1",
+    "address_limit": "1",
+    "fees": "1500usaf"
+  }
 }
